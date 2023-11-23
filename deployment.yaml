@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-deployment
+  # namespace:yashika
+  labels:
+    app: django
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: django
+  template:
+    metadata:
+      labels:
+        app: django
+    spec:
+      containers:
+      - name: angry-taussig
+        image: yashika0427/django-repository:latest
+        ports:
+        - containerPort: 8000
+        
+
+
+
+
+#         apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: app1
+#   #namespace: ingress-nginx
+#   labels:
+#     app: app1
+# spec:
+#   replicas: 2
+#   selector:
+#     matchLabels:
+#       app: app1
+#   template:
+#     metadata:
+#       labels:
+#         app: app1
+#     spec:
+#       containers:
+#       - name: trusting-wilbur
+#         image: raviraaz12/thirdrepo:latest
+#         ports:
+#         - containerPort: 8000
+ 
+# has context menu
