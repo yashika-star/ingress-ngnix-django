@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: django-deployment
-  # namespace:yashika
+  namespace: yashika
   labels:
     app: django
 spec:
